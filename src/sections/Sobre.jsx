@@ -1,3 +1,3 @@
-export const Projects = () => {
+export const Sobre = () => {
   return <section></section>;
 };

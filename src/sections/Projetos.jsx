@@ -1,3 +1,3 @@
-export const Contact = () => {
+export const Projetos = () => {
   return <section></section>;
 };
