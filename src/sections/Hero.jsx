@@ -31,6 +31,21 @@ export const Hero = () => {
               Full-Stack Software Developer
             </span>
           </div>
+
+          {/* Headline */}
+          <div className="space-y-4 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              Transformando desafios
+              <br/>
+              em soluções <span className= "text-primary glow-text">digitais </span>
+              <br/>
+              com <span className= "font-serif italic font-normal text-white">eficiência.</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              Olá! Me chamo Adson Mozart - Sou Desenvolvedor Full-Stack com foco em Java, C#, React, Next.Js e TypeScript.
+              Construo soluções digitais que unem criatividade e tecnologia para transformar ideias em realidade. 
+            </p>
+          </div>
         </div>
         {/* Right Column - Profile Image */}
       </div>
