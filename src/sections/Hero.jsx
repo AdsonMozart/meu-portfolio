@@ -1,3 +1,7 @@
+import { AnimatedBorderButton } from "@/components/BordaAnimadaBotao";
+import { Button } from "@/components/Botao";
+import { ArrowRight, Download } from "lucide-react";
+
 export const Hero = () => {
   return (
   <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -35,16 +39,27 @@ export const Hero = () => {
           {/* Headline */}
           <div className="space-y-4 animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-              Transformando desafios
+              Transformando
               <br/>
-              em soluções <span className= "text-primary glow-text">digitais </span>
+              <span className= "font-serif italic font-normal text-white">desafios</span> em
               <br/>
-              com <span className= "font-serif italic font-normal text-white">eficiência.</span>
+              <span className= "text-primary glow-text">soluções digitais.</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
               Olá! Me chamo Adson Mozart - Sou Desenvolvedor Full-Stack com foco em Java, C#, React, Next.Js e TypeScript.
               Construo soluções digitais que unem criatividade e tecnologia para transformar ideias em realidade. 
             </p>
+          </div>
+
+          {/* Call to Action */}
+          <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            <Button size="lg">
+               Contate-me<ArrowRight className="w-5 h-5"/>
+            </Button>
+            <AnimatedBorderButton>
+                <Download className="w-5 h-5" />
+                Download CV
+            </AnimatedBorderButton>
           </div>
         </div>
         {/* Right Column - Profile Image */}
