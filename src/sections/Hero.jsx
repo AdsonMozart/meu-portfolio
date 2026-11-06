@@ -1,7 +1,23 @@
 import { AnimatedBorderButton } from "@/components/BordaAnimadaBotao";
 import { Button } from "@/components/Botao";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+
+const skills = [
+  "Java",
+  "C#",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "TypeScript",
+  "Python",
+  "MySQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Docker",
+  "Git/Github",
+  "Inteligência Artificial",
+];
 
 export const Hero = () => {
   return (
@@ -40,7 +56,7 @@ export const Hero = () => {
           {/* Headline */}
           <div className="space-y-4 animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-              Transformando
+              Traduzindo
               <br/>
               <span className= "font-serif italic font-normal text-white">desafios</span> em
               <br/>
@@ -116,6 +132,44 @@ export const Hero = () => {
               </div>
             </div>
         </div>
+      </div>
+      
+      {/* Skills Section */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Tecnologias / Ferramentas:
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-gradient-to-r from-background to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-gradient-to-l from-background to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-800"
+      >
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </div>
   </section>);
