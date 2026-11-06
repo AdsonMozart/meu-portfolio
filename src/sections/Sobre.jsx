@@ -1,10 +1,27 @@
-import { Code2 } from "lucide-react";
+import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Código Limpo",
     description: "Escrevo código limpo, legível e de fácil manutenção, seguindo boas práticas de desenvolvimento.",
+  },
+  {
+    icon: Rocket,
+    title: " Alta Performance",
+    description:
+      "Otimizo aplicações para garantir alta performance e eficiência com o recurso necessário, proporcionando uma experiência fluida aos usuários.",
+  },
+  {
+    icon: Users,
+    title: "Colaboração",
+    description: "Aprecio a comunicação e o trabalho em equipe para promover o alinhamento e o alto rendimento.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Inovação",
+    description:
+      "Busco constantemente me atualizar com novas soluções e abordagens criativas para resolver problemas complexos.",
   },
 ];
 
@@ -58,6 +75,22 @@ export const Sobre = () => {
           </div>
 
           {/* Right Column */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {highlights.map((item, index) => (
+              <div 
+                key={index} 
+                className="glass p-6 rounded-2xl glow-border animate-fade-in"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
