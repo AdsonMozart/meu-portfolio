@@ -1,6 +1,7 @@
 import { AnimatedBorderButton } from "@/components/BordaAnimadaBotao";
 import { Button } from "@/components/Botao";
 import { ArrowRight, Download } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export const Hero = () => {
   return (
@@ -61,8 +62,60 @@ export const Hero = () => {
                 Download CV
             </AnimatedBorderButton>
           </div>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Siga-me: </span>
+              {[
+                { icon: FaLinkedin, href: "#" },
+                { icon: FaGithub, href: "#" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-5 h-5" />}
+                </a>
+              ))}
+            </div>
         </div>
         {/* Right Column - Profile Image */}
+        <div className="relative animate-fade-in animation-delay-300">
+          {/* Profile Image */}
+          <div className="relative max-w-md mx-auto">
+              <div
+                className="absolute inset-0 
+              rounded-3xl bg-gradient-to-br 
+              from-primary/30 via-transparent 
+              to-primary/10 blur-2xl animate-pulse"
+              />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/profile-image.jpg"
+                  alt="Adson Mozart"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Disponível
+                    </span>
+                  </div>
+                </div>
+                {/* Stats Badge */}
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-2xl font-bold text-primary">4+</div>
+                  <div className="text-xs text-muted-foreground">
+                    Anos de Estudos
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </section>);
