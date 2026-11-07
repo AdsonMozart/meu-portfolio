@@ -65,7 +65,7 @@ export const Sobre = () => {
               </p>
             </div>
 
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
               <p className="text-lg font-medium italic text-foreground">
                 "Minha missão é criar experiências digitais que além de funcionais, sejam verdadeiramente
                 encantadoras, produtos que os usuários sejam apaixonados em utilizar, que os desenvolvedores tenham
@@ -79,7 +79,7 @@ export const Sobre = () => {
             {highlights.map((item, index) => (
               <div 
                 key={index} 
-                className="glass p-6 rounded-2xl glow-border animate-fade-in"
+                className="glass p-6 rounded-2xl glow-border animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}>
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary" />
