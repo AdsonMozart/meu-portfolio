@@ -79,7 +79,9 @@ export const Experiencias = () => {
                   <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
                   <p className="text-muted-foreground">{exp.company}</p>
                   <p className="text-sm text-muted-foreground mt-4">{exp.description}</p>
-                  <div>
+                  <div
+                      className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}
+                    >
                     {exp.tools.map((tech, techIndex) => (
                       <span
                         key={techIndex}
