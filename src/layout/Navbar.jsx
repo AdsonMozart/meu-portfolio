@@ -6,7 +6,6 @@ const navLinks = [
   {href: "#sobre", label: "Sobre"},
   {href: "#projetos", label: "Projetos"},
   {href: "#experiencias", label: "Experiências"},
-  {href: "#depoimentos", label: "Depoimentos"}
 ];
 
 export const Navbar = () => {
