@@ -70,7 +70,7 @@ export const Hero = () => {
 
           {/* Call to Action */}
           <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-            <Button size="lg">
+            <Button size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
                Contate-me<ArrowRight className="w-5 h-5"/>
             </Button>
             <AnimatedBorderButton>
@@ -83,12 +83,14 @@ export const Hero = () => {
           <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Siga-me: </span>
               {[
-                { icon: FaLinkedin, href: "#" },
-                { icon: FaGithub, href: "#" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/in/mozar7", target:"_blank", rel:"noopener noreferrer" },
+                { icon: FaGithub, href: "https://github.com/AdsonMozart", target:"_blank", rel:"noopener noreferrer" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target={social.target}
+                  rel={social.rel}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
