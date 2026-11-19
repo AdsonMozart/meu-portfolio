@@ -4,6 +4,7 @@ import { Sobre } from "@/sections/Sobre";
 import { Projetos } from "@/sections/Projetos";
 import { Experiencias } from "@/sections/Experiencias";
 import { Contato } from "@/sections/Contato";
+import { Footer } from "./layout/Footex";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Experiencias />
         <Contato />
       </main>
+      <Footer />
     </div>
   )
 }
