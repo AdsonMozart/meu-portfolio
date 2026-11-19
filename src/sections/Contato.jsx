@@ -12,7 +12,7 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "WhatSapp",
+    label: "WhatsApp",
     value: "(71) 98884-7768",
     href: "wa.me/+5571988847768",
   },

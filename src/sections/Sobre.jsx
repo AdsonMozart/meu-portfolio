@@ -37,10 +37,10 @@ export const Sobre = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Superando limites,
+              Superando limites e
               <span className="font-serif italic font-normal text-white">
                  {" "}
-                 um obstáculo de cada vez.
+                criando soluções.
               </span>
             </h2>
 
